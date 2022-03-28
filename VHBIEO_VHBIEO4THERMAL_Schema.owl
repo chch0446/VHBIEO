@@ -1,0 +1,2331 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.hozo.jp/owl/EXPOApr19.xml/"
+     xml:base="http://www.hozo.jp/owl/EXPOApr19.xml/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:uo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
+     xmlns:sur="https://w3id.org/survey-ontology#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dnas="http://dnas#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:sosa="http://www.w3.org/ns/sosa/"
+     xmlns:sted="http://sted#"
+     xmlns:expo1="http://www.hozo.jp/owl/EXPOApr19/"
+     xmlns:gbxml="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#"
+     xmlns:gbxml1="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#"
+     xmlns:schema="http://schema.org/"
+     xmlns:vhbieo="http://vhbieo#"
+     xmlns:vhbieo1="http://vbeo#"
+     xmlns:oboInOwl="oboInOwl:"
+     xmlns:expoapr19.xml="http://www.hozo.jp/owl/EXPOApr19.xml/"
+     xmlns:vhbieo4thermal="http://vhbieo4thermal#">
+    <owl:Ontology rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/">
+        <rdfs:comment>
+HOZO:OWL Export TEST
+</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://schema.org/rangeIncludes -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/rangeIncludes"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- oboInOwl:hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="oboInOwl:hasExactSynonym"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/is_unit_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/is_unit_of">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#unit_related"/>
+        <owl:inverseOf rdf:resource="http://vbeo#has_unit_of"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/Unit"/>
+        <rdfs:range rdf:resource="http://www.hozo.jp/owl/EXPOApr19/Variable"/>
+        <rdfs:range rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#BuildingParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#AnswerFor -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#AnswerFor">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#Survey_Related"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Answer"/>
+        <rdfs:range rdf:resource="https://w3id.org/survey-ontology#Question"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#SSN_Related -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#SSN_Related"/>
+    
+
+
+    <!-- http://vbeo#Survey_Related -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#Survey_Related"/>
+    
+
+
+    <!-- http://vbeo#action_of -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#action_of">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <rdfs:domain rdf:resource="http://dnas#Actions"/>
+        <rdfs:label>action_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#answerTo -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#answerTo">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#Survey_Related"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#CompleteQuestion"/>
+        <rdfs:range rdf:resource="https://w3id.org/survey-ontology#Question"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#assemble -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#assemble">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#simulation"/>
+        <owl:inverseOf rdf:resource="http://vbeo#assembledThrough"/>
+        <rdfs:domain rdf:resource="http://vbeo#HardwareType"/>
+        <rdfs:range rdf:resource="http://vbeo#ExperimentalSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#assembledThrough -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#assembledThrough">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#simulation"/>
+        <rdfs:domain rdf:resource="http://vbeo#ExperimentalSetting"/>
+        <rdfs:range rdf:resource="http://vbeo#HardwareType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#assist -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#assist">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#simulation"/>
+        <owl:inverseOf rdf:resource="http://vbeo#performedThrough"/>
+        <rdfs:domain rdf:resource="http://vbeo#VirtualReality"/>
+        <rdfs:range rdf:resource="http://dnas#Actions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#associatedWithEvent -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#associatedWithEvent">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <owl:inverseOf rdf:resource="http://vbeo#compriseOf"/>
+        <rdfs:domain rdf:resource="http://sted#Context"/>
+        <rdfs:domain rdf:resource="http://vbeo#PredictorCondition"/>
+        <rdfs:range rdf:resource="http://sted#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#associatedWith_Act -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#associatedWith_Act">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#association"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Answer"/>
+        <rdfs:range rdf:resource="http://dnas#Actions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#associatedWith_Build -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#associatedWith_Build">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#association"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Answer"/>
+        <rdfs:range rdf:resource="http://vbeo#BuildingID"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#associatedWith_ExpSet -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#associatedWith_ExpSet">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#association"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Answer"/>
+        <rdfs:range rdf:resource="http://vbeo#ExperimentalSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#associatedWith_Location -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#associatedWith_Location">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#association"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Question"/>
+        <rdfs:range rdf:resource="http://vbeo#SpecificLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#associatedWith_StateOf -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#associatedWith_StateOf">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <owl:inverseOf rdf:resource="http://vbeo#associatedWith_Target"/>
+        <rdfs:domain rdf:resource="http://www.hozo.jp/owl/EXPOApr19/TargetVariable"/>
+        <rdfs:range rdf:resource="http://sted#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#associatedWith_Target -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#associatedWith_Target">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <rdfs:domain rdf:resource="http://sted#State"/>
+        <rdfs:range rdf:resource="http://www.hozo.jp/owl/EXPOApr19/TargetVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#association -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#association"/>
+    
+
+
+    <!-- http://vbeo#capturedByQuestion -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#capturedByQuestion">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#Survey_Related"/>
+        <owl:inverseOf rdf:resource="http://vbeo#questionCapture"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Question"/>
+        <rdfs:range rdf:resource="http://dnas#Actions"/>
+        <rdfs:range rdf:resource="http://vbeo#UncontrolledContextualVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#capturedBySensor -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#capturedBySensor">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <owl:inverseOf rdf:resource="http://vbeo#sensorCapture"/>
+        <rdfs:domain rdf:resource="http://dnas#Actions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#compriseOf -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#compriseOf">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <rdfs:domain rdf:resource="http://sted#Event"/>
+        <rdfs:range rdf:resource="http://sted#Context"/>
+        <rdfs:range rdf:resource="http://vbeo#PredictorCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#controlledIn -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#controlledIn">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#simulation"/>
+        <owl:inverseOf rdf:resource="http://vbeo#enableControlOf"/>
+        <rdfs:domain rdf:resource="http://sted#Context"/>
+        <rdfs:domain rdf:resource="http://vbeo#PredictorCondition"/>
+        <rdfs:range rdf:resource="http://vbeo#ExperimentalSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#correspondingTo_ExperimentalFactor -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#correspondingTo_ExperimentalFactor">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#association"/>
+        <owl:inverseOf rdf:resource="http://vbeo#factorOf"/>
+        <rdfs:domain rdf:resource="http://www.hozo.jp/owl/EXPOApr19/Variable"/>
+        <rdfs:range rdf:resource="http://vbeo#EperimentalFactor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#defineContext -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#defineContext">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <owl:inverseOf rdf:resource="http://vbeo#isContextOf"/>
+        <rdfs:domain rdf:resource="http://vbeo#ControlledContextualVariable"/>
+        <rdfs:range rdf:resource="http://sted#Context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#define_variable -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#define_variable">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#protocol"/>
+        <rdfs:domain rdf:resource="http://www.hozo.jp/owl/EXPOApr19/ExperimentalProtocol"/>
+        <rdfs:range rdf:resource="http://www.hozo.jp/owl/EXPOApr19/Variable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#enableControlOf -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#enableControlOf">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#simulation"/>
+        <rdfs:domain rdf:resource="http://vbeo#ExperimentalSetting"/>
+        <rdfs:range rdf:resource="http://sted#Context"/>
+        <rdfs:range rdf:resource="http://vbeo#PredictorCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#enableOccurrenceOf -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#enableOccurrenceOf">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#simulation"/>
+        <owl:inverseOf rdf:resource="http://vbeo#occurIn"/>
+        <rdfs:domain rdf:resource="http://vbeo#ExperimentalSetting"/>
+        <rdfs:range rdf:resource="http://vbeo#UncontrolledContextualVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#enablePerformingOf -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#enablePerformingOf">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#simulation"/>
+        <owl:inverseOf rdf:resource="http://vbeo#performedIn"/>
+        <rdfs:domain rdf:resource="http://vbeo#ExperimentalSetting"/>
+        <rdfs:range rdf:resource="http://dnas#Actions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#factorOf -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#factorOf">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#association"/>
+        <rdfs:domain rdf:resource="http://vbeo#EperimentalFactor"/>
+        <rdfs:range rdf:resource="http://www.hozo.jp/owl/EXPOApr19/Variable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#grant -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#grant">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <owl:inverseOf rdf:resource="http://vbeo#grantedBy"/>
+        <rdfs:domain rdf:resource="http://sted#State"/>
+        <rdfs:range rdf:resource="http://dnas#Actions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#grantedBy -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#grantedBy">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <rdfs:domain rdf:resource="http://dnas#Actions"/>
+        <rdfs:range rdf:resource="http://sted#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#hasControlledCondition -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#hasControlledCondition">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <owl:inverseOf rdf:resource="http://vbeo#isControlledConditionOf"/>
+        <rdfs:domain rdf:resource="http://vbeo#PredictorVariable"/>
+        <rdfs:range rdf:resource="http://vbeo#PredictorCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#has_buildingInfo -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#has_buildingInfo">
+        <rdfs:subPropertyOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/hasPart"/>
+        <rdfs:domain rdf:resource="http://vbeo#BuildingID"/>
+        <rdfs:range rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#BuildingParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#has_component -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#has_component">
+        <rdfs:subPropertyOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/hasPart"/>
+        <owl:inverseOf rdf:resource="http://vbeo#isComponentOf"/>
+        <rdfs:domain rdf:resource="http://vbeo#HardwareType"/>
+        <rdfs:range rdf:resource="http://vbeo#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#has_state -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#has_state">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <owl:inverseOf rdf:resource="http://vbeo#isAllowableStateOf"/>
+        <rdfs:domain rdf:resource="http://vbeo#HumanSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#has_unit_of -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#has_unit_of">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#unit_related"/>
+        <rdfs:domain rdf:resource="http://www.hozo.jp/owl/EXPOApr19/Variable"/>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#BuildingParameter"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#involveEvent -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#involveEvent">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#association"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Answer"/>
+        <rdfs:range rdf:resource="http://sted#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#involveQuestion -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#involveQuestion">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#Survey_Related"/>
+        <owl:inverseOf rdf:resource="http://vbeo#isTypeOf"/>
+        <rdfs:domain rdf:resource="http://vhbieo#SurveyType"/>
+        <rdfs:range rdf:resource="https://w3id.org/survey-ontology#Question"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#isAllowableStateOf -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#isAllowableStateOf">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#isComponentOf">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#association"/>
+        <rdfs:domain rdf:resource="http://vbeo#Component"/>
+        <rdfs:range rdf:resource="http://vbeo#HardwareType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#isContextOf -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#isContextOf">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <rdfs:domain rdf:resource="http://sted#Context"/>
+        <rdfs:range rdf:resource="http://vbeo#ControlledContextualVariable"/>
+        <owl:propertyDisjointWith rdf:resource="http://vbeo#isControlledConditionOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#isControlledConditionOf -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#isControlledConditionOf">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <rdfs:domain rdf:resource="http://vbeo#PredictorCondition"/>
+        <rdfs:range rdf:resource="http://vbeo#PredictorVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#isDataOf -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#isDataOf">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#association"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Answer"/>
+        <rdfs:range rdf:resource="http://dnas#OccupantID"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#isInfoOfBuilding -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#isInfoOfBuilding">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#association"/>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#BuildingParameter"/>
+        <rdfs:range rdf:resource="http://vbeo#BuildingID"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#isTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#isTypeOf">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#Survey_Related"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Question"/>
+        <rdfs:range rdf:resource="http://vhbieo#SurveyType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#observedBy -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#observedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/forProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/observes"/>
+        <rdfs:domain rdf:resource="http://vbeo#UncontrolledContextualVariable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#occurIn -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#occurIn">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#simulation"/>
+        <rdfs:domain rdf:resource="http://vbeo#UncontrolledContextualVariable"/>
+        <rdfs:range rdf:resource="http://vbeo#ExperimentalSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#performedIn -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#performedIn">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#simulation"/>
+        <rdfs:domain rdf:resource="http://dnas#Actions"/>
+        <rdfs:range rdf:resource="http://vbeo#ExperimentalSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#performedThrough -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#performedThrough">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#simulation"/>
+        <rdfs:domain rdf:resource="http://dnas#Actions"/>
+        <rdfs:range rdf:resource="http://vbeo#VirtualReality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#protocol -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#protocol"/>
+    
+
+
+    <!-- http://vbeo#questionCapture -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#questionCapture">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#Survey_Related"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Question"/>
+        <rdfs:range rdf:resource="http://dnas#Actions"/>
+        <rdfs:range rdf:resource="http://vbeo#UncontrolledContextualVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#relatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#relatedTo">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#Survey_Related"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Question"/>
+        <rdfs:range rdf:resource="http://vhbieo#SurveyType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#respondTo_Event -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#respondTo_Event">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#association"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Answer"/>
+        <rdfs:range rdf:resource="http://sted#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#sensorCapture -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#sensorCapture">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:range rdf:resource="http://dnas#Actions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#set -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#set">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#protocol"/>
+        <rdfs:domain rdf:resource="http://www.hozo.jp/owl/EXPOApr19/ExperimentalProtocol"/>
+        <rdfs:range rdf:resource="http://vbeo#ExperimentalSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#simulate -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#simulate">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#simulation"/>
+        <owl:inverseOf rdf:resource="http://vbeo#simulatedIn"/>
+        <rdfs:domain rdf:resource="http://vbeo#ExperimentalSetting"/>
+        <rdfs:range rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#Building"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#simulatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#simulatedIn">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#simulation"/>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#Building"/>
+        <rdfs:range rdf:resource="http://vbeo#ExperimentalSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#simulation -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#simulation">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#sted_related"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#specify_HardwareType -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#specify_HardwareType">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#protocol"/>
+        <rdfs:domain rdf:resource="http://www.hozo.jp/owl/EXPOApr19/ExperimentalProtocol"/>
+        <rdfs:range rdf:resource="http://vbeo#HardwareType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#specify_building -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#specify_building">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#protocol"/>
+        <rdfs:domain rdf:resource="http://www.hozo.jp/owl/EXPOApr19/ExperimentalProtocol"/>
+        <rdfs:range rdf:resource="http://vbeo#BuildingID"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#sted_related -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#sted_related"/>
+    
+
+
+    <!-- http://vbeo#surveyed_property -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#surveyed_property">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#Survey_Related"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Answer"/>
+        <rdfs:range rdf:resource="http://dnas#Actions"/>
+        <rdfs:range rdf:resource="http://vbeo#UncontrolledContextualVariable"/>
+        <rdfs:label>surveyedProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vbeo#unit_related -->
+
+    <owl:ObjectProperty rdf:about="http://vbeo#unit_related"/>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.hozo.jp/owl/EXPOApr19/hasPart">
+        <rdfs:label>hasPart</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19/has_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.hozo.jp/owl/EXPOApr19/has_">
+        <rdfs:subPropertyOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/hasPart"/>
+        <rdfs:domain rdf:resource="http://vbeo#VirtualBuildingExperiment"/>
+        <rdfs:range rdf:resource="http://www.hozo.jp/owl/EXPOApr19/ExperimentalProtocol"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/actsOnProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/actsOnProperty">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#SSN_Related"/>
+        <rdfs:range rdf:resource="http://www.hozo.jp/owl/EXPOApr19/TargetVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeBySensor -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeBySensor">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#SSN_Related"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/madeObservation"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:label xml:lang="en">madeBySensor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeObservation -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeObservation">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#SSN_Related"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:label xml:lang="en">madeObservation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/observedProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observedProperty">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#SSN_Related"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://www.hozo.jp/owl/EXPOApr19/Variable"/>
+        <rdfs:label xml:lang="en">observedProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/forProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/forProperty">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#SSN_Related"/>
+        <rdfs:label>for property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/observes -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/observes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/forProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:range rdf:resource="http://vbeo#UncontrolledContextualVariable"/>
+        <rdfs:label>observes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vbeo#controlled_value -->
+
+    <owl:DatatypeProperty rdf:about="http://vbeo#controlled_value">
+        <rdfs:domain rdf:resource="http://vbeo#ControlledContextualVariable"/>
+        <rdfs:domain rdf:resource="http://vbeo#PredictorVariable"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vbeo#encoded_value -->
+
+    <owl:DatatypeProperty rdf:about="http://vbeo#encoded_value">
+        <rdfs:domain rdf:resource="http://vbeo#ControlledContextualVariable"/>
+        <rdfs:domain rdf:resource="http://vbeo#PredictorVariable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vbeo#has_output -->
+
+    <owl:DatatypeProperty rdf:about="http://vbeo#has_output">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vbeo#has_value -->
+
+    <owl:DatatypeProperty rdf:about="http://vbeo#has_value"/>
+    
+
+
+    <!-- http://vbeo#max_range -->
+
+    <owl:DatatypeProperty rdf:about="http://vbeo#max_range">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/MeasurementRange"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vbeo#min_range -->
+
+    <owl:DatatypeProperty rdf:about="http://vbeo#min_range">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/MeasurementRange"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vbeo#output_float -->
+
+    <owl:DatatypeProperty rdf:about="http://vbeo#output_float">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#has_output"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:propertyDisjointWith rdf:resource="http://vbeo#output_string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vbeo#output_int -->
+
+    <owl:DatatypeProperty rdf:about="http://vbeo#output_int">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#has_output"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vbeo#output_string -->
+
+    <owl:DatatypeProperty rdf:about="http://vbeo#output_string">
+        <rdfs:subPropertyOf rdf:resource="http://vbeo#has_output"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vbeo#time_stamp -->
+
+    <owl:DatatypeProperty rdf:about="http://vbeo#time_stamp">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasSimpleResult -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sosa/hasSimpleResult">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/survey-ontology#Answer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/MeasurementProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/ssn/MeasurementProperty">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/MeasurementRange -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/ssn/MeasurementRange">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dnas#Actions -->
+
+    <owl:Class rdf:about="http://dnas#Actions">
+        <rdfs:subClassOf rdf:resource="http://sted#H-BInteraction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#performedThrough"/>
+                <owl:allValuesFrom rdf:resource="http://vbeo#In-situHardware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#performedThrough"/>
+                <owl:allValuesFrom rdf:resource="http://vbeo#VirtualReality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Actions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://dnas#OccupantID -->
+
+    <owl:Class rdf:about="http://dnas#OccupantID">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/ComputationalData"/>
+        <rdfs:label>OccupantID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/Unit -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/Unit">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Proposition"/>
+        <rdfs:label>unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/area_unit -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/area_unit">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/Unit"/>
+        <rdfs:label>area unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/length_unit -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/length_unit">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/Unit"/>
+        <rdfs:label>length unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/temperature_unit -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/temperature_unit">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/Unit"/>
+        <rdfs:label>temperature unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/time_unit -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/time_unit">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sted#Context -->
+
+    <owl:Class rdf:about="http://sted#Context">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/PlanOfExperimentalActions"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#controlled_value"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://sted#Event"/>
+        <owl:disjointWith rdf:resource="http://sted#H-BInteraction"/>
+        <owl:disjointWith rdf:resource="http://sted#State"/>
+        <rdfs:label>Context</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sted#Event -->
+
+    <owl:Class rdf:about="http://sted#Event">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/PlanOfExperimentalActions"/>
+        <owl:disjointWith rdf:resource="http://sted#H-BInteraction"/>
+        <owl:disjointWith rdf:resource="http://sted#State"/>
+        <rdfs:label>Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sted#H-BInteraction -->
+
+    <owl:Class rdf:about="http://sted#H-BInteraction">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/PlanOfExperimentalActions"/>
+        <owl:disjointWith rdf:resource="http://sted#State"/>
+        <rdfs:label>H-BInteraction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sted#State -->
+
+    <owl:Class rdf:about="http://sted#State">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/PlanOfExperimentalActions"/>
+        <rdfs:label>State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#BuildingID -->
+
+    <owl:Class rdf:about="http://vbeo#BuildingID">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#Building"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#simulatedIn"/>
+                <owl:allValuesFrom rdf:resource="http://vbeo#In-situSetting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#simulatedIn"/>
+                <owl:allValuesFrom rdf:resource="http://vbeo#VirtualSetting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#Component -->
+
+    <owl:Class rdf:about="http://vbeo#Component">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#ContextualVariable -->
+
+    <owl:Class rdf:about="http://vbeo#ContextualVariable">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/Variable"/>
+        <dc:creator>champ</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#ControlledContextualVariable -->
+
+    <owl:Class rdf:about="http://vbeo#ControlledContextualVariable">
+        <rdfs:subClassOf rdf:resource="http://vbeo#ContextualVariable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#DataSource -->
+
+    <owl:Class rdf:about="http://vbeo#DataSource">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/ComputationalData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#EperimentalFactor -->
+
+    <owl:Class rdf:about="http://vbeo#EperimentalFactor">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Proposition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#ExperimentalSetting -->
+
+    <owl:Class rdf:about="http://vbeo#ExperimentalSetting">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Plan"/>
+        <rdfs:label>ExperimentalSetting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#HardwareType -->
+
+    <owl:Class rdf:about="http://vbeo#HardwareType">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#HumanBodyLocation -->
+
+    <owl:Class rdf:about="http://vbeo#HumanBodyLocation">
+        <rdfs:subClassOf rdf:resource="http://vbeo#SpecificLocation"/>
+        <rdfs:label>Human Body Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#HumanSystem -->
+
+    <owl:Class rdf:about="http://vbeo#HumanSystem">
+        <rdfs:subClassOf rdf:resource="http://sted#State"/>
+        <rdfs:label>HumanSystem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#In-situHardware -->
+
+    <owl:Class rdf:about="http://vbeo#In-situHardware">
+        <rdfs:subClassOf rdf:resource="http://vbeo#HardwareType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#assist"/>
+                <owl:someValuesFrom rdf:resource="http://dnas#Actions"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#In-situSetting -->
+
+    <owl:Class rdf:about="http://vbeo#In-situSetting">
+        <rdfs:subClassOf rdf:resource="http://vbeo#ExperimentalSetting"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://vbeo#PredictorCondition"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://vbeo#enableControlOf"/>
+                                <owl:someValuesFrom rdf:resource="http://vbeo#ControlledContextualVariable"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://vbeo#PredictorCondition"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://vbeo#enableControlOf"/>
+                                <owl:someValuesFrom rdf:resource="http://vbeo#ControlledContextualVariable"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#enableOccurrenceOf"/>
+                <owl:someValuesFrom rdf:resource="http://vbeo#UncontrolledContextualVariable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#simulate"/>
+                <owl:someValuesFrom rdf:resource="http://vbeo#BuildingID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#assembledThrough"/>
+                <owl:allValuesFrom rdf:resource="http://vbeo#In-situHardware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#PredictorCondition -->
+
+    <owl:Class rdf:about="http://vbeo#PredictorCondition">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/PlanOfExperimentalActions"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#controlled_value"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#PredictorVariable -->
+
+    <owl:Class rdf:about="http://vbeo#PredictorVariable">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/Variable"/>
+        <rdfs:label xml:lang="en">PredictorVariable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#SensingElement -->
+
+    <owl:Class rdf:about="http://vbeo#SensingElement">
+        <rdfs:subClassOf rdf:resource="http://vbeo#DataSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#SpecificLocation -->
+
+    <owl:Class rdf:about="http://vbeo#SpecificLocation">
+        <rdfs:subClassOf rdf:resource="http://vbeo#DataSource"/>
+        <rdfs:label>SpecificLocation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#ThermalFactor -->
+
+    <owl:Class rdf:about="http://vbeo#ThermalFactor">
+        <rdfs:subClassOf rdf:resource="http://vbeo#EperimentalFactor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#UncontrolledContextualVariable -->
+
+    <owl:Class rdf:about="http://vbeo#UncontrolledContextualVariable">
+        <rdfs:subClassOf rdf:resource="http://vbeo#ContextualVariable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#VirtualBuildingExperiment -->
+
+    <owl:Class rdf:about="http://vbeo#VirtualBuildingExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/DomainOfExperiment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#VirtualReality -->
+
+    <owl:Class rdf:about="http://vbeo#VirtualReality">
+        <rdfs:subClassOf rdf:resource="http://vbeo#HardwareType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#assist"/>
+                <owl:someValuesFrom rdf:resource="http://dnas#Actions"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vbeo#VirtualSetting -->
+
+    <owl:Class rdf:about="http://vbeo#VirtualSetting">
+        <rdfs:subClassOf rdf:resource="http://vbeo#ExperimentalSetting"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://vbeo#PredictorCondition"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://vbeo#enableControlOf"/>
+                                <owl:someValuesFrom rdf:resource="http://vbeo#ControlledContextualVariable"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://vbeo#PredictorCondition"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://vbeo#enableControlOf"/>
+                                <owl:someValuesFrom rdf:resource="http://vbeo#ControlledContextualVariable"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#enableOccurrenceOf"/>
+                <owl:someValuesFrom rdf:resource="http://vbeo#UncontrolledContextualVariable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#simulate"/>
+                <owl:someValuesFrom rdf:resource="http://vbeo#BuildingID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#assembledThrough"/>
+                <owl:allValuesFrom rdf:resource="http://vbeo#VirtualReality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo#SurveyType -->
+
+    <owl:Class rdf:about="http://vhbieo#SurveyType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/survey-ontology#SurveyElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#Analysis -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#Analysis">
+        <rdfs:subClassOf rdf:resource="http://vhbieo4thermal#Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#Background -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#Background">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/ExperimentalProtocol"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#ClosedAnswerType -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#ClosedAnswerType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/survey-ontology#ClosedAnswer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#ClosedQuestionType -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#ClosedQuestionType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/survey-ontology#ClosedQuestion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#Confidentiality -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#Confidentiality">
+        <rdfs:subClassOf rdf:resource="http://vhbieo4thermal#Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#DragAndDrop -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#DragAndDrop">
+        <rdfs:subClassOf rdf:resource="http://vhbieo4thermal#ClosedQuestionType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#GeneralCloseAnswer -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#GeneralCloseAnswer">
+        <rdfs:subClassOf rdf:resource="http://vhbieo4thermal#ClosedAnswerType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#Hypothesis -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#Hypothesis">
+        <owl:equivalentClass rdf:resource="http://www.hozo.jp/owl/EXPOApr19/ResearchHypothesis"/>
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/ExperimentalProtocol"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#Method -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#Method">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/ExperimentalProtocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#MultipleChoices -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#MultipleChoices">
+        <rdfs:subClassOf rdf:resource="http://vhbieo4thermal#ClosedQuestionType"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#NumberOfVisit -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#NumberOfVisit">
+        <rdfs:subClassOf rdf:resource="http://vhbieo4thermal#StudyTimeline"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#PotentialRisk -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#PotentialRisk">
+        <rdfs:subClassOf rdf:resource="http://vhbieo4thermal#Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#SampleSize -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#SampleSize">
+        <rdfs:subClassOf rdf:resource="http://vhbieo4thermal#Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#SpecificExperimentSetting -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#SpecificExperimentSetting">
+        <rdfs:subClassOf rdf:resource="http://vbeo#PredictorCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#SpecificHumidity -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#SpecificHumidity">
+        <rdfs:subClassOf rdf:resource="http://sted#Context"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#SpecificTemperature -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#SpecificTemperature">
+        <rdfs:subClassOf rdf:resource="http://vbeo#PredictorCondition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#StatementOfpurpose -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#StatementOfpurpose">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/ExperimentalProtocol"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#StudyTimeline -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#StudyTimeline">
+        <rdfs:subClassOf rdf:resource="http://vhbieo4thermal#Method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#SubjectsExclusionCriteria -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#SubjectsExclusionCriteria">
+        <rdfs:subClassOf rdf:resource="http://vhbieo4thermal#Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#SubjectsInclusionCriteria -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#SubjectsInclusionCriteria">
+        <rdfs:subClassOf rdf:resource="http://vhbieo4thermal#Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#bodey_mass_index_unit -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#bodey_mass_index_unit">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/Unit"/>
+        <rdfs:label>bmi unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#heartrate_unit -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#heartrate_unit">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#humidity_unit -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#humidity_unit">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/Unit"/>
+        <rdfs:label>humidity unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#5-pointsLikertScale -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#5-pointsLikertScale">
+        <rdfs:subClassOf rdf:resource="http://vhbieo4thermal#ClosedAnswerType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vhbieo4thermal#7-pointsLikertScale -->
+
+    <owl:Class rdf:about="http://vhbieo4thermal#7-pointsLikertScale">
+        <rdfs:subClassOf rdf:resource="http://vhbieo4thermal#ClosedAnswerType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Abstract -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Abstract">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Entity"/>
+        <rdfs:label>Abstract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/AlternativeHypothesis -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/AlternativeHypothesis">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/ExperimentalHypothesis"/>
+        <rdfs:label>AlternativeHypothesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Attribute -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Attribute">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Abstract"/>
+        <owl:disjointWith rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Proposition"/>
+        <owl:disjointWith rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Relation"/>
+        <rdfs:label>Attribute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/BiblioReference -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/BiblioReference">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/Reference"/>
+        <owl:disjointWith rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/DBReference"/>
+        <owl:disjointWith rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/URL"/>
+        <rdfs:label>BiblioReference</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/ComputationalData -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/ComputationalData">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/ExperimentalObservation"/>
+        <rdfs:label>ComputationalData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/DBReference -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/DBReference">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/Reference"/>
+        <owl:disjointWith rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/URL"/>
+        <rdfs:label>DBReference</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Device -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Device">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/ExperimentalEquipment"/>
+        <rdfs:label>Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Entity -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Entity">
+        <rdfs:label>Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/ExperimentalHypothesis -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/ExperimentalHypothesis">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Proposition"/>
+        <rdfs:label>ExperimentalHypothesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/ExperimentalObservation -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/ExperimentalObservation">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/ProductRole"/>
+        <rdfs:label>ExperimentalObservation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/FieldOfStudy -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/FieldOfStudy">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Proposition"/>
+        <rdfs:label>FieldOfStudy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Hardware -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Hardware">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Device"/>
+        <rdfs:label>Hardware</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Name -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Name">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Attribute"/>
+        <rdfs:label>Name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/NullHypothesis -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/NullHypothesis">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/ExperimentalHypothesis"/>
+        <rdfs:label>NullHypothesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Plan -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Plan">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Prcedure"/>
+        <rdfs:label>Plan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/PlanOfExperimentalActions -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/PlanOfExperimentalActions">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Plan"/>
+        <rdfs:label>PlanOfExperimentalActions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Prcedure -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Prcedure">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Proposition"/>
+        <rdfs:label>Procedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Predicate -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Predicate">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Relation"/>
+        <rdfs:label>Predicate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/ProcedureExecuteExperiment -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/ProcedureExecuteExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Prcedure"/>
+        <rdfs:label>ProcedureExecuteExperiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Process-relatedRole -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Process-relatedRole">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Role"/>
+        <rdfs:label>Process-relatedRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/ProductRole -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/ProductRole">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Process-relatedRole"/>
+        <rdfs:label>ProductRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Proposition -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Proposition">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Abstract"/>
+        <owl:disjointWith rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Relation"/>
+        <rdfs:label>Proposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Relation -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Relation">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Abstract"/>
+        <rdfs:label>Relation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/RepresentationForm -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/RepresentationForm">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Role"/>
+        <rdfs:label>RepresentationForm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Role -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Role">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Predicate"/>
+        <rdfs:label>Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/Title -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/Title">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Name"/>
+        <rdfs:label>Title</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/URL -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/URL">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/Reference"/>
+        <rdfs:label>URL</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19/DomainOfExperiment -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19/DomainOfExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/FieldOfStudy"/>
+        <rdfs:label>DomainOfExperiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19/ExperimentalEquipment -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19/ExperimentalEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Process-relatedRole"/>
+        <rdfs:label>ExperimentalEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19/ExperimentalProtocol -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19/ExperimentalProtocol">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/ProcedureExecuteExperiment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#define_variable"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://vbeo#PredictorVariable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#define_variable"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.hozo.jp/owl/EXPOApr19/TargetVariable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#set"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://vbeo#In-situSetting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#set"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://vbeo#VirtualSetting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#specify_HardwareType"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://vbeo#In-situHardware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#specify_HardwareType"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://vbeo#VirtualReality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#specify_building"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://vbeo#BuildingID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>ExperimentalProtocol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19/Reference -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19/Reference">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/RepresentationForm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#has_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Reference</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19/ResearchHypothesis -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19/ResearchHypothesis">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/ExperimentalHypothesis"/>
+        <rdfs:label>ResearchHypothesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19/TargetVariable -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19/TargetVariable">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19/Variable"/>
+        <rdfs:label>TargetVariable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19/TitleExperiment -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19/TitleExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Title"/>
+        <rdfs:label>TitleExperiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19/Variable -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19/Variable">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Proposition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#correspondingTo_ExperimentalFactor"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://vbeo#EperimentalFactor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Observation -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Observation">
+        <rdfs:subClassOf rdf:resource="http://vbeo#SensingElement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://vbeo#isDataOf"/>
+                        <owl:allValuesFrom rdf:resource="http://dnas#OccupantID"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://vbeo#isDataOf"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://dnas#OccupantID"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sensor -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#sensorCapture"/>
+                <owl:someValuesFrom rdf:resource="http://dnas#Actions"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/System -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/System">
+        <rdfs:subClassOf rdf:resource="http://vbeo#SensingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/survey-ontology#Answer -->
+
+    <owl:Class rdf:about="https://w3id.org/survey-ontology#Answer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/survey-ontology#SurveyElement"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/survey-ontology#Question"/>
+        <rdfs:label>Answer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/survey-ontology#ClosedAnswer -->
+
+    <owl:Class rdf:about="https://w3id.org/survey-ontology#ClosedAnswer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/survey-ontology#Answer"/>
+        <rdfs:label>Closed Answer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/survey-ontology#ClosedQuestion -->
+
+    <owl:Class rdf:about="https://w3id.org/survey-ontology#ClosedQuestion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/survey-ontology#Question"/>
+        <rdfs:label>Closed Question</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/survey-ontology#CompleteQuestion -->
+
+    <owl:Class rdf:about="https://w3id.org/survey-ontology#CompleteQuestion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/survey-ontology#SurveyElement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://vbeo#isDataOf"/>
+                        <owl:allValuesFrom rdf:resource="http://dnas#OccupantID"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://vbeo#isDataOf"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://dnas#OccupantID"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/survey-ontology#MultipleInputQuestion -->
+
+    <owl:Class rdf:about="https://w3id.org/survey-ontology#MultipleInputQuestion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/survey-ontology#OpenQuestion"/>
+        <rdfs:label>Multiple Input Question</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/survey-ontology#OpenAnswer -->
+
+    <owl:Class rdf:about="https://w3id.org/survey-ontology#OpenAnswer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/survey-ontology#Answer"/>
+        <rdfs:label>Open Answer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/survey-ontology#OpenQuestion -->
+
+    <owl:Class rdf:about="https://w3id.org/survey-ontology#OpenQuestion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/survey-ontology#Question"/>
+        <rdfs:label>Open Question</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/survey-ontology#Question -->
+
+    <owl:Class rdf:about="https://w3id.org/survey-ontology#Question">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/survey-ontology#SurveyElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vbeo#questionCapture"/>
+                <owl:someValuesFrom rdf:resource="http://dnas#Actions"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Question</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/survey-ontology#SingleInputQuestion -->
+
+    <owl:Class rdf:about="https://w3id.org/survey-ontology#SingleInputQuestion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/survey-ontology#OpenQuestion"/>
+        <rdfs:label>Single Input Question</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/survey-ontology#SurveyElement -->
+
+    <owl:Class rdf:about="https://w3id.org/survey-ontology#SurveyElement">
+        <rdfs:subClassOf rdf:resource="http://vbeo#DataSource"/>
+        <rdfs:label>Survey Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Area -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Area">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#GeometricParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Height -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Height">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#GeometricParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Length -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Length">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#GeometricParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Width -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Width">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#GeometricParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#Building -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#Building">
+        <rdfs:subClassOf rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/Plan"/>
+        <rdfs:label>Building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#BuildingParameter -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#BuildingParameter">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#GeometricParameter -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#GeometricParameter">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#BuildingParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://vbeo.te#ThermalSensationScale">
+        <rdfs:label>Thermal Sensation Scale</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vbeo.ve#light-state-0002">
+        <rdfs:label>light_state_off</rdfs:label>
+        <rdfs:comment>light is off.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
